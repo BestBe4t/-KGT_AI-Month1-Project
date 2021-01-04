@@ -510,9 +510,9 @@ def predict_sell_price(n_clicks, values, options):
     cnt = 1
     if values:
         for value in values:
-            option_dic[value] = options[cnt]['props'].get('value', 'NONE')
             if value == 'carat':
                 cnt += 1
+            option_dic[value] = options[cnt]['props'].get('value', 'NONE')
             cnt += 3
             
     return price_predict(option_dic)
@@ -540,4 +540,4 @@ def move_page(pathname):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(debug=True)

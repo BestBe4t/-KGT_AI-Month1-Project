@@ -8,7 +8,7 @@ import copy
 
 
 ################################ read_csv ################################
-dia_df = pd.read_csv('diamonds.csv')
+dia_df = pd.read_csv('./diamonds.csv')
 
 
 ################################ 기능 구현 ################################
@@ -39,13 +39,6 @@ def price_predict(option_dic):
     cut = option_dic['cut']
     color = option_dic['color']
     clarity = option_dic['clarity']
-
-    share_percent={
-        'carat' :106,
-        'color' :32,
-        'cut' :9,
-        'clarity' :1
-    }
 
     tot = 0
     # 이 캐럿의 평균 가격
